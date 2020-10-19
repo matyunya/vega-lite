@@ -1,3 +1,4 @@
+import {FieldName} from '../../src/channeldef';
 import * as log from '../../src/log';
 import {normalize} from '../../src/normalize/index';
 import {RangeStepNormalizer} from '../../src/normalize/rangestep';
@@ -10,7 +11,7 @@ describe('RangeStepNormalizer', () => {
   it(
     'converts rangeStep to width/height.step',
     log.wrap(locallogger => {
-      const spec: TopLevelUnitSpec = {
+      const spec: TopLevelUnitSpec<FieldName> = {
         data: {name: 'test'},
         mark: 'rect',
         encoding: {
